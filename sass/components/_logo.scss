@@ -1,0 +1,11 @@
+.logo {
+  color: #000000;
+  font-family: $font-raleway;
+  font-weight: $weight-700;
+  font-size: $font-26;
+  line-height: 1.2;
+  text-decoration: none;
+  .color-accent {
+    color: $accent-color;
+  }
+}

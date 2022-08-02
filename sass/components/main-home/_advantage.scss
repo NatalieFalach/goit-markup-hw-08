@@ -1,0 +1,33 @@
+.advantage__item {
+  width: 270px;
+}
+
+.advantage__svg {
+  height: 70px;
+  width: 70px;
+  transition: fill $cubik;
+}
+
+.advantage__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-grey-background;
+
+  height: 120px;
+  width: 270px;
+  border-radius: 4px;
+  fill: $primary-text-color;
+}
+
+.advantage__header {
+  font-weight: $weight-700;
+  margin-top: 30px;
+}
+
+.advantage__text {
+  margin-top: 10px;
+  font-size: $font-14;
+  line-height: 1.7;
+  color: $secondary-text-color;
+}

@@ -1,0 +1,29 @@
+.clients__list {
+  display: flex;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  width: 170px;
+  border: 1px solid $icons-color;
+  border-radius: 4px;
+  fill: $icons-color;
+  transition: fill $cubik, border $cubik;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.clients__svg {
+  width: 106px;
+  height: 60px;
+}

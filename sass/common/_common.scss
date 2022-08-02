@@ -1,0 +1,62 @@
+body {
+  font-family: $font-default;
+  color: $primary-text-color;
+  background-color: $color-white;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  width: 1200px;
+  min-width: 1200px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+}
+
+.card-set-item {
+  flex-basis: calc((100% - $indent * $items - 1)) / $items;
+}
+
+//  Глобальный h2
+.subject {
+  font-style: normal;
+  font-size: $font-36;
+  line-height: 1.2;
+  text-align: center;
+}
+
+// глобальный h3
+.basic-heding {
+  font-weight: $weight-400;
+  font-size: $font-14;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+}
+
+.visibility-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

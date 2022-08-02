@@ -1,0 +1,18 @@
+%button {
+  font-family: inherit;
+  font-weight: $weight-700;
+  font-size: $font-16;
+  line-height: calc(30 / 16);
+  color: $color-white;
+  background: $accent-color;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: transparent;
+  }
+}
