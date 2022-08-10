@@ -2,12 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px 8px;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    max-width: 400px;
+  }
   @media screen and (min-width: $tablet) {
     justify-content: center;
   }
-}
-
-.filter .filter__item + .filter__item {
 }
 
 .filter__item .btn-current {

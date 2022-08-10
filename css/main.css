@@ -168,6 +168,7 @@ body {
 }
 
 .modal {
+  min-width: 90%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -479,22 +480,22 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .hero {
-    background-image: url("../img/mobile-first/header-img1-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/mobile-first/header-img1-tablet.jpg");
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1200px) and (min-resolution: 192dpi), (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/mobile-first/header-img2-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/mobile-first/header-img2-tablet.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("../img/mobile-first/header-img1-desk.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/mobile-first/header-img1-desk.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/mobile-first/header-img2-desk.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/mobile-first/header-img2-desk.jpg");
   }
 }
 @media screen and (max-width: 768px) {
@@ -891,6 +892,11 @@ body {
   flex-wrap: wrap;
   gap: 15px 8px;
 }
+@media screen and (max-width: 767px) {
+  .filter {
+    max-width: 400px;
+  }
+}
 @media screen and (min-width: 768px) {
   .filter {
     justify-content: center;
@@ -924,6 +930,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    margin-top: 50px;
   }
 }
 
@@ -991,7 +1003,6 @@ body {
   color: #757575;
 }
 
-/* Gallery overlay */
 .gallery__overlay-wrapper {
   position: relative;
   overflow: hidden;
