@@ -1,0 +1,9 @@
+@mixin flexBox($gap: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+@mixin flexItemBasis($items: 4, $indent: 30px) {
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+}

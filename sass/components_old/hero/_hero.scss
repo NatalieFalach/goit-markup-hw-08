@@ -25,9 +25,9 @@
   }
   .hero__button {
     @extend %button;
-    letter-spacing: 0.06em;
     margin-top: 30px;
     padding: 10px 32px;
+    letter-spacing: 0.06em;
     transition: background-color $cubik;
   }
 }

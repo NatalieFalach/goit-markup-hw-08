@@ -1,29 +1,30 @@
+@import './utils/breakpoints';
 @import './utils/vars';
+@import './utils/mixins';
 @import './utils/reset';
 @import './utils/placeholder';
 
 @import './common/common';
+@import './components/all';
+@import './layout/all';
 
-@import './components/pop-up/pop-up';
+// @import './components/pop-up/pop-up';
 
-@import './components/logo';
+// @import './components/logo';
+// @import './components/header/header';
+// @import './components/header/site_nav';
+// @import './components/header/auth_nav';
 
-@import './components/header/header';
-@import './components/header/site_nav';
-@import './components/header/auth_nav';
+// @import './components/hero/hero';
 
-@import './components/hero/hero';
+// @import './components_old/main-home/advantage';
+// @import './components/main-home/work';
+// @import './components/main-home/our-team';
+// @import './components/main-home/clients';
 
-@import './components/main-home/advantage';
-@import './components/main-home/work';
-@import './components/main-home/our-team';
-@import './components/main-home/clients';
+// @import './components/portfolio/filter';
+// @import './components/portfolio/gallery';
 
-@import './components/portfolio/filter';
-@import './components/portfolio/gallery';
-
-@import './components/footer/footer';
-@import './components/footer/join';
-@import './components/footer/subscribe';
-
-@import './mobile/index';
+// @import './components/footer/footer';
+// @import './components/footer/join';
+// @import './components/footer/subscribe';

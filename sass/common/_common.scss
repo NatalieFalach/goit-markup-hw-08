@@ -5,36 +5,25 @@ body {
   letter-spacing: 0.03em;
 }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-
-  width: 1200px;
-  min-width: 1200px;
-}
-
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $indent;
-}
-
-.card-set-item {
-  flex-basis: calc((100% - $indent * $items - 1)) / $items;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 //  Глобальный h2
 .subject {
   font-style: normal;
-  font-size: $font-36;
-  line-height: 1.2;
+  font-size: $font-28;
+  line-height: calc(33px / 28px);
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    font-size: $font-36;
+    line-height: calc(42px / 36px);
+  }
 }
 
 // глобальный h3
@@ -59,4 +48,9 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

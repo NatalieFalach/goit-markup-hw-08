@@ -1,0 +1,228 @@
+.menu__wrapper {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-grow: 1;
+  }
+}
+.menu__wrapper.is-open {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  padding: 48px 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $color-white;
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+    position: static;
+    display: flex;
+  }
+}
+
+.btn__menu-button {
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  &.is-open {
+    z-index: 100;
+  }
+}
+
+.btn__menu-button .icon__cross {
+  display: none;
+}
+.btn__menu-button.is-open .icon__cross {
+  display: block;
+}
+
+.btn__menu-button.is-open .icon__menu {
+  display: none;
+}
+.icon__cross {
+  transition: color $cubik;
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.header__site-nav {
+  // @todo - попробовать сделать без отрицательного марджина
+  margin-bottom: -32px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0px;
+    margin-left: 88px;
+    display: flex;
+    gap: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+}
+
+.header__link {
+  display: block;
+  text-decoration: none;
+  color: $primary-text-color;
+  font-weight: $weight-500;
+  font-size: $font-40;
+  line-height: calc(47px / 40px);
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: $font-14;
+    line-height: 1.14;
+    transition: color $cubik;
+
+    &:hover {
+      color: $accent-color;
+      outline: none;
+    }
+  }
+}
+
+.header__current {
+  color: $accent-color;
+
+  @media screen and (min-width: $tablet) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
+
+.header__contacts {
+  @media screen and (max-width: $tablet) {
+    margin-top: 300px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-top: 21px;
+    margin-left: 90px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 30px;
+    margin-top: 32px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: end;
+    align-items: baseline;
+  }
+}
+
+.header__contacts-link {
+  font-weight: $weight-500;
+  font-size: $font-34;
+  line-height: calc(40px / 34px);
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  text-decoration: none;
+  transition: color $cubik, fill $cubik;
+  &:hover {
+    color: $accent-color;
+    outline: none;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $tablet) {
+    color: $secondary-text-color;
+    font-size: $font-12;
+    line-height: calc(14px / 12px);
+
+    fill: $secondary-text-color;
+    transition: color $cubik, fill $cubik;
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+      color: $accent-color;
+      outline: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: $font-14;
+    line-height: calc(16px / 14px);
+  }
+}
+.header__mail {
+  color: $secondary-text-color;
+  font-size: $font-24;
+  // font-weight: $weight-500;
+  line-height: calc(28px / 24px);
+  @media screen and (min-width: $tablet) {
+    font-size: $font-12;
+    font-weight: $weight-500;
+    line-height: calc(14px / 12px);
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: $font-14;
+    line-height: calc(16px / 14px);
+  }
+}
+
+.header__contacts-svg {
+  display: none;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+    display: inline-block;
+    &.header__contacts-icon-phone {
+      width: 10px;
+      height: 14px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    &.header__contacts-icon-phone {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}
+.header__contacts-item {
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

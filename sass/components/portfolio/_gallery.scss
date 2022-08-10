@@ -1,7 +1,35 @@
 .gallery {
-  --items: 3;
-  margin-top: 50px;
+  margin-top: 40px;
+  @media screen and (min-width: $tablet) {
+    @include flexBox();
+  }
 }
+.gallery__card {
+  @media screen and (max-width: $phone) {
+    margin-top: 30px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    @include flexItemBasis(2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include flexItemBasis(3);
+  }
+  &:focus .overlay,
+  &:hover .overlay {
+    transform: translateY(0);
+  }
+}
+
+// .gallery__img {
+//   width: 450px;
+//   @media screen and (min-width: $tablet) {
+//     width: 354px;
+//   }
+// }
 
 .gallery__link {
   display: block;
@@ -13,6 +41,11 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: none;
   }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .gallery__border {
@@ -20,6 +53,9 @@
 
   border: 1px solid #eeeeee;
   border-top: 0;
+  @media screen and (min-width: $tablet) {
+    flex-grow: 1;
+  }
 }
 
 .gallery__heading {
@@ -35,12 +71,7 @@
   line-height: 1.9;
   color: $secondary-text-color;
 }
-.gallery__card {
-  &:focus .overlay,
-  &:hover .overlay {
-    transform: translateY(0);
-  }
-}
+
 /* Gallery overlay */
 .gallery__overlay-wrapper {
   position: relative;

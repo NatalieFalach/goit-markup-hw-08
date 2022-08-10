@@ -1,7 +1,12 @@
 .clients__list {
+  margin-top: 30px;
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 50px;
+  }
 }
 
 .clients__link {
@@ -9,7 +14,7 @@
   justify-content: center;
   align-items: center;
   height: 92px;
-  width: 170px;
+  width: 210px;
   border: 1px solid $icons-color;
   border-radius: 4px;
   fill: $icons-color;
@@ -20,6 +25,13 @@
     border: 1px solid $accent-color;
     border-radius: 4px;
     outline: none;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    width: 226px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 170px;
   }
 }
 

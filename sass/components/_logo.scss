@@ -1,11 +1,22 @@
 .logo {
+  margin-top: 16px;
+  margin-bottom: 16px;
   color: #000000;
   font-family: $font-raleway;
   font-weight: $weight-700;
-  font-size: $font-26;
-  line-height: 1.2;
+  font-size: $font-24;
+  line-height: calc(28px / 24px);
   text-decoration: none;
   .color-accent {
     color: $accent-color;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-top: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 24px;
+    font-size: 26px;
+    line-height: calc(31px / 26px);
   }
 }
