@@ -8,13 +8,17 @@
   }
 }
 .menu__wrapper.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+
   z-index: 1;
   position: absolute;
   padding: 48px 40px;
   top: 0;
   left: 0;
-  width: 100%;
 
   background-color: $color-white;
   @media screen and (min-width: $tablet) {
@@ -53,12 +57,13 @@
     fill: $accent-color;
   }
 }
-
+.header__nav {
+  @media screen and (max-width: calc($tablet - 1px)) {
+    margin-bottom: auto;
+  }
+}
 .header__site-nav {
-  // @todo - попробовать сделать без отрицательного марджина
-  margin-bottom: -32px;
   @media screen and (min-width: $tablet) {
-    margin-bottom: 0px;
     margin-left: 88px;
     display: flex;
     gap: 50px;
@@ -118,7 +123,6 @@
 
 .header__contacts {
   @media screen and (max-width: $tablet) {
-    margin-top: 300px;
     display: flex;
     gap: 32px;
     flex-direction: column-reverse;
@@ -153,6 +157,9 @@
   &:hover {
     color: $accent-color;
     outline: none;
+  }
+  @media screen and (max-width: calc($phone - 1px)) {
+    font-size: $font-26;
   }
 
   @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {

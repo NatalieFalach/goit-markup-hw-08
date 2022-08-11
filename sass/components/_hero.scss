@@ -26,7 +26,7 @@
     color: $color-white;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
       max-width: 360px;
     }
     @media screen and (min-width: $desktop) {
@@ -34,6 +34,7 @@
       line-height: calc(60px / 44px);
     }
   }
+
   .hero__button {
     @extend %button;
     letter-spacing: 0.06em;
@@ -45,7 +46,11 @@
     }
   }
 }
-
+@media screen and (max-width: calc($tablet - 1px)) {
+  .hero {
+    margin-top: 60px;
+  }
+}
 @media screen and (max-width: $tablet) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),

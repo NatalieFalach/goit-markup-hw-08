@@ -1,6 +1,14 @@
 .header {
   position: relative;
   border-bottom: 1px solid #ececec;
+  background: $color-white;
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
 }
 .header__container {
   display: flex;
