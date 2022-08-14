@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 10px;
   @media screen and (max-width: calc($phone - 1px)) {
+    gap: 5px;
     margin-top: 30px;
   }
   @media screen and (min-width: $tablet) {
@@ -17,6 +18,9 @@
     border: none;
     padding: 0;
   }
+  @media screen and (max-width: calc($phone - 1px)) {
+    padding-right: 5px;
+  }
 }
 .header__social-link {
   font-weight: 500;
@@ -25,4 +29,7 @@
   letter-spacing: 0.02em;
   color: $accent-color;
   text-decoration: none;
+  @media screen and (max-width: calc($phone - 1px)) {
+    font-size: $font-12;
+  }
 }
