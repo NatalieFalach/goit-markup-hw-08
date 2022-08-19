@@ -20,7 +20,7 @@
   min-width: 90%;
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 53%;
 
   padding: 40px 40px;
 
@@ -31,6 +31,9 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 12%), 0px 1px 1px rgba(0, 0, 0, 14%),
     0px 2px 1px rgba(0, 0, 0, 20%);
   border-radius: 4px;
+  @media screen and (max-width: calc($phone - 1px)) {
+    top: 52%;
+  }
   @media screen and (min-width: $phone) {
     min-width: 450px;
   }
@@ -55,6 +58,9 @@
   line-height: calc(23 / 20);
   text-align: center;
   color: $primary-text-color;
+  @media screen and (max-width: calc($phone - 1px)) {
+    font-size: $font-18;
+  }
 }
 
 .modal__icon {
@@ -192,6 +198,9 @@
   &:focus {
     color: $color-white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @media screen and (max-width: calc($phone - 1px)) {
+    margin-top: 20px;
   }
 }
 

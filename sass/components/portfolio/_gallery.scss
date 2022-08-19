@@ -91,6 +91,7 @@
     transition: transform $cubik;
     @media screen and (max-width: calc($phone - 1px)) {
       padding: 20px;
+      font-size: $font-16;
     }
     @media screen and (min-width: $tablet) {
       padding: 49px 24px;
